@@ -5,15 +5,15 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: tojian, server: eth.xnyky.xyz, port: 443, type: trojan, password: AXNVqbrl4Z, skip-cert-verify: true, udp: true}
-  - {name: RN-圣何塞, server: ton.xnyky.xyz, port: 443, type: trojan, password: gBaauKhvsq, skip-cert-verify: true, udp: true}
+  - {name: RN-西雅图, server: eth.xnyky.xyz, port: 443, type: trojan, password: AXNVqbrl4ZC, skip-cert-verify: true, udp: true}
+  - {name: RN-圣何塞, server: ton.xnyky.xyz, port: 443, type: trojan, password: gBaauKhvsqG, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
   - name: ♻️ 自动选择
     type: url-test
@@ -21,7 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
   - name: 🌍 国外媒体
     type: select
@@ -29,28 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
   - name: 📢 谷歌FCM
     type: select
@@ -58,7 +58,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
   - name: 🎯 全球直连
     type: select
@@ -82,7 +82,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - tojian
+      - RN-西雅图
       - RN-圣何塞
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
